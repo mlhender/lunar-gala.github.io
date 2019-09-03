@@ -1,145 +1,94 @@
----
-heading: Blog
----
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width" />
-<link rel="stylesheet" type="text/css" href="../../../main-content/themes/INTRO/INTRO-style.css" />
-<link rel="stylesheet" type="text/css" href="../../../main-content/themes/INTRO/2017changes.css" />
-<link rel="stylesheet" type="text/css" href="../../../main-content/themes/INTRO/INTRO-responsive.css" />
-<link rel="stylesheet" type="text/css" href="../../../main-content/themes/INTRO/BLOG-fullpage.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
-<script src="../../../main-content/themes/INTRO/Blog.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet">
-<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../../..//favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../../..//favicon-16x16.png">
-<link rel="manifest" href="../../../site.webmanifest">
-<link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-<title>Lunar Gala</title>
-
-
-<script type="text/javascript">
-$(document).ready(function(){
-	$('#nav-icon').click(function(){
-			$(this).toggleClass('collapsed');
-			$(this).toggleClass('open');
-			$(".menu").toggleClass('on');
-			$(".menu li").toggleClass('open').toggleClass('ani');
-			$(".logo").toggleClass('hidden');
-			$(".title-mb").toggleClass('hidden');
-	});
-});
-</script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel='stylesheet' href='https://cdn.bootcss.com/Swiper/4.0.7/css/swiper.min.css'>
+  <link rel="stylesheet" href="./style0.css">
+  
+  <title>Lunar Gala 2020</title>
 </head>
 
-
-
-
-
-
 <body>
-<div class="border-left"></div>
-<div class="border-top"></div>
-<div class="border-bottom"></div>
-<div class="border-right"></div>
-
-<div class = "lg-nav">
-	<div class="menu">
-		<li ><a href="/"> About</a>
-		<li class="active"><a href="blog"> Blog </a>
-		<li><a href="timeline">Timeline</a>
-		<li><a href="contact">Contact</a>
-	</div>
-	<div class="logo"><a href="/"><img src="../../../2017images/LOGO-black-header.png"></a></div>
-	<div class="title-mb"><a href="/">ABOUT</a></div>
-	<div id="nav-icon">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-	</div>
-</div>
-
-
-<div class="blogs">
-   <div class="back"></div>
-   <div class="close">
-    <h1>Back</h1>
-    <span></span>
+  <div id="sidebar">
+    <div id="header-image">
+      <a href="index.html"><img src="images/style0/logo-black.png" alt="LG Logo"></a>
+    </div>
+    <div id="intro">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
   </div>
+  
+<!--
+  <div id="gradient">
+      
+  </div>
+-->
+  
+  <!-- partial:index.partial.html -->
+  <!-- Slider main container -->
+ <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide c1">
+        <a href="POSTS/1.html">
+            <div class="background" style="background-image: url(images/COVER/6.png)" ></div>
+        </a>
+        <div class="caption">Sep 1</div>
+      </div>
+      <div class="swiper-slide c2">
+        <a href="POSTS/1.html">
+            <div class="background" style="background-image: url(images/COVER/5.png)" ></div>
+        </a>
+        <div class="caption">Aug 31</div>
+      </div>
+      <div class="swiper-slide c3">
+        <a  href="POSTS/1.html">
+            <div class="background" style="background-image: url(images/COVER/4.png)" ></div>
+        </a>
+        <div class="caption">Aug 30</div>
+      </div>
+      <div class="swiper-slide c1">
+        <a href="POSTS/1.html">
+            <div class="background" style="background-image: url(images/COVER/3.png)" ></div>
+        </a>
+        <div class="caption">Aug 29</div>
+      </div>
+      <div class="swiper-slide c2">
+        <a href="POSTS/1.html">
+            <div class="background" style="background-image: url(images/COVER/2.png)" ></div>
+        </a>
+        <div class="caption">Aug 28</div>
+      </div>
+      <div class="swiper-slide c3">
+        <a  href="POSTS/1.html">
+            <div class="background" style="background-image: url(images/COVER/1.png)" ></div>
+        </a>
+        <div class="caption">Aug 27</div>
+      </div>
+    </div>
+    <!-- If we need pagination -->
 
-     {% for post in site.posts %}
-
-	   <div class="post">
-	     <h1>{{post.title}}</h1>
-	    <div class="ladder-background">
-	       <div class="ladder-container">
-	         <div class="ladder-element ladder-img ladder-b" style="background-image:url('{{post.image1}}')"></div>
-	         <div class="ladder-element ladder-text ladder-a">
-	           <div class="text-content">
-	            <h3>{{post.subtitle1}}</h3>
-	            <p>{{post.content1}}</p>
-	          </div>
-	         </div>
-	       </div>
-	       <div class="ladder-container">
-	         <div class="ladder-element ladder-img ladder-a" style="background-image:url('{{post.image2}}')"></div>
-	         <div class="ladder-element ladder-text ladder-b">
-	           <div class="text-content">
-	            <h3>{{post.subtitle2}}</h3>
-	            <p>{{post.content2}}</p>
-	          </div>
-	         </div>
-	       </div>
-	       <div class="ladder-container">
-	         <div class="ladder-element ladder-img ladder-b" style="background-image:url('{{post.image3}}')"></div>
-	         <div class="ladder-element ladder-text ladder-a">
-	           <div class="text-content">
-	            <h3>{{post.subtitle3}}</h3>
-	            <p>{{post.content3}}</p>
-	          </div>
-	         </div>
-	       </div>
-	     </div>
-	     <br><br><br>
-	   </div>
-
-     {% endfor %}
-
-   </div>
-
-	 <div class="nav" id="fullpage">
-
-     {% for post in site.posts %}
-
-	   <div class="section section1">
-	     <div class="images">
-	      <div class="img imgA" style="background-image:url('{{post.image1}}')">
-	       </div>
-	       <div class="img imgB" style="background-image:url('{{post.image2}}')">
-	       </div>
-	       <div class="img imgC" style="background-image:url('{{post.image3}}')">
-	      </div>
-	       <div class="text">
-	        <h1>{{post.title}}</h1>
-	      </div>
-	    </div>
-	   </div>
-
-     {% endfor %}
-
-	 </div>
-
-
+    <!-- If we need navigation buttons -->
+    <!-- Add Arrows -->
+    <div class="arrows-container">
+      <div class="swiper-arrow swiper-button-prev">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="swiper-arrow swiper-button-next">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  <script  src="./script.js"></script>
 </body>
 </html>
